@@ -20,8 +20,8 @@ function Metrics() {
   const practicalRadius = (flightHeight / 60).toFixed(1)
 
   return (
-    <div style={{ padding: '4rem 2rem', maxWidth: '1400px', margin: '0 auto', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000' }}>
-      <section style={{ marginBottom: '4rem', background: '#1a1a1a', padding: '4rem 3rem', borderRadius: '16px', width: '100%' }} className="metrics-section">
+    <div style={{ padding: '4rem 2rem', maxWidth: '1400px', margin: '0 auto', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#808080' }}>
+      <section style={{ marginBottom: '4rem', background: '#2a2a2a', padding: '4rem 3rem', borderRadius: '16px', width: '100%' }} className="metrics-section">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }} className="metrics-grid">
           <div style={{ order: 1 }} className="metrics-controls">
             <h1>Skyvertising Metrics</h1>
@@ -30,7 +30,7 @@ function Metrics() {
               Estimate how altitude, canvas size and city density translate into real, physical impressions on the ground.
             </p>
 
-            <div style={{ background: '#1a1a1a', padding: '1rem', borderRadius: '8px', marginBottom: '2rem', fontWeight: 500, color: '#FFD700', border: '1px solid #333' }}>
+            <div style={{ background: '#2a2a2a', padding: '1rem', borderRadius: '8px', marginBottom: '2rem', fontWeight: 500, color: '#FFD700', border: '1px solid #333' }}>
               Canvas: {screens} screens × {screenSize} sq ft each = {totalCanvas.toLocaleString()} sq ft ({totalCanvasM2} m²).
             </div>
 
@@ -100,7 +100,7 @@ function Metrics() {
               </div>
             </div>
 
-            <p style={{ background: '#1a1a1a', padding: '1rem', borderRadius: '8px', marginBottom: '2rem', fontWeight: 500, color: '#FFD700', border: '1px solid #333' }}>
+            <p style={{ background: '#2a2a2a', padding: '1rem', borderRadius: '8px', marginBottom: '2rem', fontWeight: 500, color: '#FFD700', border: '1px solid #333' }}>
               At {flightHeight} ft, practical radius ≈ {practicalRadius} km in city conditions.
             </p>
           </div>
@@ -117,9 +117,9 @@ function Metrics() {
               <tbody>
                 {visibilityData.map((row) => (
                   <tr key={row.radius}>
-                    <td style={{ padding: '1rem', textAlign: 'left', borderBottom: '1px solid #333', color: '#FFF', background: '#1a1a1a' }}>{row.radius.toFixed(1)}</td>
-                    <td style={{ padding: '1rem', textAlign: 'left', borderBottom: '1px solid #333', color: '#FFF', background: '#1a1a1a' }}>{row.area.toFixed(4)}</td>
-                    <td style={{ padding: '1rem', textAlign: 'left', borderBottom: '1px solid #333', color: '#FFF', background: '#1a1a1a' }}>{row.impressions.toLocaleString()}</td>
+                    <td style={{ padding: '1rem', textAlign: 'left', borderBottom: '1px solid #333', color: '#FFF', background: '#2a2a2a' }}>{row.radius.toFixed(1)}</td>
+                    <td style={{ padding: '1rem', textAlign: 'left', borderBottom: '1px solid #333', color: '#FFF', background: '#2a2a2a' }}>{row.area.toFixed(4)}</td>
+                    <td style={{ padding: '1rem', textAlign: 'left', borderBottom: '1px solid #333', color: '#FFF', background: '#2a2a2a' }}>{row.impressions.toLocaleString()}</td>
                   </tr>
                 ))}
               </tbody>

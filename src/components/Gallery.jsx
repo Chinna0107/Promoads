@@ -12,14 +12,14 @@ function Gallery() {
   ]
 
   return (
-    <div style={{ background: '#000', minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem' }}>
+    <div style={{ background: '#808080', minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
         <h1 style={{ 
           fontSize: '3.5rem', 
           textAlign: 'center', 
           marginBottom: '3rem', 
-          color: '#FFD700',
-          textShadow: '0 4px 20px rgba(255, 215, 0, 0.4)',
+          color: '#1E90FF',
+          textShadow: '0 4px 20px rgba(30, 144, 255, 0.4)',
           fontWeight: 700
         }}>
           Our Gallery
@@ -44,8 +44,8 @@ function Gallery() {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)'
-                e.currentTarget.style.borderColor = '#FFD700'
-                e.currentTarget.style.boxShadow = '0 12px 40px rgba(255, 215, 0, 0.3)'
+                e.currentTarget.style.borderColor = '#1E90FF'
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(30, 144, 255, 0.3)'
                 e.currentTarget.querySelector('img').style.transform = 'scale(1.1)'
               }}
               onMouseLeave={(e) => {

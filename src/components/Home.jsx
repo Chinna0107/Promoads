@@ -132,7 +132,7 @@ function Home() {
         </div>
       </div>
 
-      <div style={{ background: 'linear-gradient(135deg, #000 0%, #1a1a1a 100%)', padding: '5rem 2rem' }}>
+      <div style={{ background: '#808080', padding: '5rem 2rem' }}>
         <h2 style={{
           textAlign: 'center',
           fontSize: '3rem',
@@ -152,7 +152,7 @@ function Home() {
             style={{
             maxWidth: '600px',
             margin: '0 auto 4rem',
-            background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
+            background: 'linear-gradient(135deg, #808080 0%, #909090 100%)',
             borderRadius: '15px',
             boxShadow: hoveredProduct === index ? '0 12px 50px rgba(30, 144, 255, 0.4), 0 0 0 2px #1E90FF' : '0 8px 30px rgba(30, 144, 255, 0.2)',
             transition: 'all 0.4s ease',
@@ -192,7 +192,7 @@ function Home() {
         ))}
       </div>
 
-      <div style={{ background: '#000', padding: '6rem 2rem' }}>
+      <div style={{ background: '#808080', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div 
             onMouseEnter={() => setHoveredCard('quote')}
@@ -459,7 +459,7 @@ function Home() {
         </div>
       </div>
 
-      <div style={{ background: '#000', padding: '6rem 2rem' }}>
+      <div style={{ background: '#808080', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div 
             onMouseEnter={() => setHoveredCard('franchise')}

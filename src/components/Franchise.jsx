@@ -20,7 +20,7 @@ function Franchise() {
   }
 
   return (
-    <div style={{ background: '#000', minHeight: '100vh', paddingTop: '80px' }}>
+    <div style={{ background: '#808080', minHeight: '100vh', paddingTop: '80px' }}>
       <style>{`
         @media (max-width: 768px) {
           .franchise-card { flex-direction: column !important; }
@@ -28,7 +28,7 @@ function Franchise() {
         }
       `}</style>
 
-      <div style={{ background: '#000', padding: '6rem 2rem' }}>
+      <div style={{ background: '#808080', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div className="franchise-card" style={{
             background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
@@ -51,7 +51,7 @@ function Franchise() {
                 fontSize: '3rem',
                 marginBottom: '1.5rem'
               }}>🤝</div>
-              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#FFD700' }}>Franchise Opportunity</h2>
+              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#1E90FF' }}>Franchise Opportunity</h2>
               <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: '1.8', color: '#fff' }}>
                 Partner with us to bring aerial LED advertising to your city. We provide the technology, training, and support — you grow the business locally.
               </p>
@@ -63,7 +63,7 @@ function Franchise() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#FFD700',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -71,7 +71,7 @@ function Franchise() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   City-wise Opportunities
@@ -83,7 +83,7 @@ function Franchise() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#FFD700',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -91,7 +91,7 @@ function Franchise() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   Complete Training & Support
@@ -102,7 +102,7 @@ function Franchise() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#FFD700',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -110,20 +110,20 @@ function Franchise() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   Strong Brand Backing
                 </div>
               </div>
               <div style={{
-                background: 'rgba(255,215,0,0.1)',
+                background: 'rgba(30,144,255,0.1)',
                 padding: '1.5rem',
                 borderRadius: '10px',
                 marginTop: '2rem',
-                border: '1px solid #FFD700'
+                border: '1px solid #1E90FF'
               }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#FFD700' }}>Become a Franchise Partner</h3>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#1E90FF' }}>Become a Franchise Partner</h3>
                 <p style={{ color: '#fff' }}>Join our growing network of successful partners</p>
               </div>
             </div>
@@ -132,7 +132,7 @@ function Franchise() {
               <h3 style={{
                 fontSize: '1.8rem',
                 marginBottom: '1.5rem',
-                color: '#FFD700',
+                color: '#1E90FF',
                 fontWeight: 600
               }}>Partner With Us</h3>
               <form onSubmit={handleFranchiseSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
@@ -153,7 +153,7 @@ function Franchise() {
                     background: '#1a1a1a',
                     color: '#fff'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#FFD700'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -173,7 +173,7 @@ function Franchise() {
                     background: '#1a1a1a',
                     color: '#fff'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#FFD700'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -194,7 +194,7 @@ function Franchise() {
                     background: '#1a1a1a',
                     color: '#fff'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#FFD700'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -214,7 +214,7 @@ function Franchise() {
                     background: '#1a1a1a',
                     color: '#fff'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#FFD700'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <textarea
@@ -236,7 +236,7 @@ function Franchise() {
                     background: '#1a1a1a',
                     color: '#fff'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#FFD700'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <button

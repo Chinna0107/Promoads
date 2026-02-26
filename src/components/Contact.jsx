@@ -39,7 +39,7 @@ function Contact() {
   }
 
   return (
-    <div style={{ background: '#000', minHeight: '100vh', paddingTop: '80px' }}>
+    <div style={{ background: '#808080', minHeight: '100vh', paddingTop: '80px' }}>
       <style>{`
         @media (max-width: 768px) {
           .contact-card { flex-direction: column !important; }
@@ -47,7 +47,7 @@ function Contact() {
         }
       `}</style>
 
-      <div style={{ background: '#000', padding: '6rem 2rem' }}>
+      <div style={{ background: '#808080', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div className="contact-card" style={{
             background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%)',
@@ -309,7 +309,7 @@ function Contact() {
         </div>
       </div>
 
-      <div style={{ background: '#000', padding: '6rem 2rem' }}>
+      <div style={{ background: '#808080', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div className="contact-card" style={{
             background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%)',

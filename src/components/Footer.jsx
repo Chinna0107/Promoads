@@ -7,7 +7,7 @@ function Footer() {
     <footer style={{ width: '100vw', margin: 0, padding: 0, boxSizing: 'border-box', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw' }}>
       
       {/* Section 1: Company Info & Inquiries */}
-      <div style={{ backgroundColor: '#1a1a1a', padding: '4rem 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
+      <div style={{ backgroundColor: '#2a2a2a', padding: '4rem 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
         <div style={{ flex: '1 1 400px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
             <img src={logo} alt="PromoADS Logo" style={{ height: '50px', width: 'auto', borderRadius: '8px' }} />
@@ -66,7 +66,7 @@ function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div style={{ backgroundColor: '#1a1a1a', padding: '2rem 5%', textAlign: 'center', borderTop: '1px solid #333' }}>
+      <div style={{ backgroundColor: '#2a2a2a', padding: '2rem 5%', textAlign: 'center', borderTop: '1px solid #333' }}>
         <p style={{ color: '#FFF', fontSize: '0.9rem', letterSpacing: '0.5px', margin: 0 }}>© {new Date().getFullYear()} PromoADS. All rights reserved.</p>
       </div>
     </footer>
