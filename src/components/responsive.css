@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  .service-grid, .feature-list {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .product-card {
+    flex-direction: column !important;
+  }
+  
+  .quote-card, .franchise-card {
+    flex-direction: column !important;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .container {
+    padding: 0 1rem !important;
+  }
+}

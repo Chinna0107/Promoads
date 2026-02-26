@@ -21,16 +21,23 @@ function Franchise() {
 
   return (
     <div style={{ background: '#000', minHeight: '100vh', paddingTop: '80px' }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .franchise-card { flex-direction: column !important; }
+          .franchise-desc { border-right: none !important; border-bottom: 2px solid #FFD700 !important; }
+        }
+      `}</style>
+
       <div style={{ background: '#000', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{
+          <div className="franchise-card" style={{
             background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
             borderRadius: '20px',
             boxShadow: '0 20px 60px rgba(255,215,0,0.3)',
             overflow: 'hidden',
             display: 'flex'
           }}>
-            <div style={{
+            <div className="franchise-desc" style={{
               flex: 1,
               background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
               padding: '3rem',

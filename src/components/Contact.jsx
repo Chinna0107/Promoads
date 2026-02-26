@@ -40,30 +40,37 @@ function Contact() {
 
   return (
     <div style={{ background: '#000', minHeight: '100vh', paddingTop: '80px' }}>
+      <style>{`
+        @media (max-width: 768px) {
+          .contact-card { flex-direction: column !important; }
+          .contact-desc { border-right: none !important; border-bottom: 2px solid #1E90FF !important; }
+        }
+      `}</style>
+
       <div style={{ background: '#000', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{
-            background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
+          <div className="contact-card" style={{
+            background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%)',
             borderRadius: '20px',
             boxShadow: '0 20px 60px rgba(193,169,108,0.3)',
             overflow: 'hidden',
             display: 'flex'
           }}>
-            <div style={{
+            <div className="contact-desc" style={{
               flex: 1,
-              background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
+              background: 'linear-gradient(135deg, #f0f8ff 0%, #1E90FF 100%)',
               padding: '3rem',
               color: 'white',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              borderRight: '2px solid #c1a96c'
+              borderRight: '2px solid #1E90FF'
             }}>
               <div style={{
                 fontSize: '3rem',
                 marginBottom: '1.5rem'
               }}>💡</div>
-              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#c1a96c' }}>Get a Quote</h2>
+              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#1E90FF' }}>Get a Quote</h2>
               <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: '1.8', color: '#fff' }}>
                 Bring your vision to life with aerial LED advertising. From events to campaigns, we create moments that dominate the sky.
               </p>
@@ -75,7 +82,7 @@ function Contact() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -83,7 +90,7 @@ function Contact() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   Fast Response
@@ -95,7 +102,7 @@ function Contact() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -103,7 +110,7 @@ function Contact() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   Custom Show Planning
@@ -114,7 +121,7 @@ function Contact() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -122,7 +129,7 @@ function Contact() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   Pan-India Operations
@@ -133,18 +140,18 @@ function Contact() {
                 padding: '1.5rem',
                 borderRadius: '10px',
                 marginTop: '2rem',
-                border: '1px solid #c1a96c'
+                border: '1px solid #1E90FF'
               }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#c1a96c' }}>Have Questions?</h3>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#1E90FF' }}>Have Questions?</h3>
                 <p style={{ color: '#fff' }}>We're here to help you create unforgettable moments</p>
               </div>
             </div>
             
-            <div style={{ flex: 1, padding: '3rem', background: '#2d2d2d' }}>
+            <div style={{ flex: 1, padding: '3rem', background: '#e6f2ff' }}>
               <h3 style={{
                 fontSize: '1.8rem',
                 marginBottom: '1.5rem',
-                color: '#c1a96c',
+                color: '#1E90FF',
                 fontWeight: 600
               }}>Request Your Quote</h3>
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
@@ -162,10 +169,10 @@ function Contact() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -182,10 +189,10 @@ function Contact() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -203,10 +210,10 @@ function Contact() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -223,10 +230,10 @@ function Contact() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -243,10 +250,10 @@ function Contact() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <textarea
@@ -265,18 +272,18 @@ function Contact() {
                     resize: 'vertical',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <button
                   type="submit"
                   style={{
                     padding: '1.2rem',
-                    background: '#c1a96c',
-                    color: '#000',
+                    background: '#1E90FF',
+                    color: '#fff',
                     border: 'none',
                     borderRadius: '8px',
                     fontSize: '1.1rem',
@@ -304,28 +311,28 @@ function Contact() {
 
       <div style={{ background: '#000', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{
-            background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
+          <div className="contact-card" style={{
+            background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%)',
             borderRadius: '20px',
             boxShadow: '0 20px 60px rgba(193,169,108,0.3)',
             overflow: 'hidden',
             display: 'flex'
           }}>
-            <div style={{
+            <div className="contact-desc" style={{
               flex: 1,
-              background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
+              background: 'linear-gradient(135deg, #f0f8ff 0%, #1E90FF 100%)',
               padding: '3rem',
               color: 'white',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              borderRight: '2px solid #c1a96c'
+              borderRight: '2px solid #1E90FF'
             }}>
               <div style={{
                 fontSize: '3rem',
                 marginBottom: '1.5rem'
               }}>🤝</div>
-              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#c1a96c' }}>Franchise Enquiry</h2>
+              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#1E90FF' }}>Franchise Enquiry</h2>
               <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: '1.8', color: '#fff' }}>
                 Partner with us to bring aerial LED advertising to your city. We provide the technology, training, and support — you grow the business locally.
               </p>
@@ -337,7 +344,7 @@ function Contact() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -345,7 +352,7 @@ function Contact() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   City-wise Opportunities
@@ -357,7 +364,7 @@ function Contact() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -365,7 +372,7 @@ function Contact() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   Complete Training & Support
@@ -376,7 +383,7 @@ function Contact() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -384,7 +391,7 @@ function Contact() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   Strong Brand Backing
@@ -395,18 +402,18 @@ function Contact() {
                 padding: '1.5rem',
                 borderRadius: '10px',
                 marginTop: '2rem',
-                border: '1px solid #c1a96c'
+                border: '1px solid #1E90FF'
               }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#c1a96c' }}>Become a Franchise Partner</h3>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#1E90FF' }}>Become a Franchise Partner</h3>
                 <p style={{ color: '#fff' }}>Join our growing network of successful partners</p>
               </div>
             </div>
             
-            <div style={{ flex: 1, padding: '3rem', background: '#2d2d2d' }}>
+            <div style={{ flex: 1, padding: '3rem', background: '#e6f2ff' }}>
               <h3 style={{
                 fontSize: '1.8rem',
                 marginBottom: '1.5rem',
-                color: '#c1a96c',
+                color: '#1E90FF',
                 fontWeight: 600
               }}>Partner With Us</h3>
               <form onSubmit={handleFranchiseSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
@@ -424,10 +431,10 @@ function Contact() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -444,10 +451,10 @@ function Contact() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -465,10 +472,10 @@ function Contact() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -485,10 +492,10 @@ function Contact() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <textarea
@@ -507,18 +514,18 @@ function Contact() {
                     resize: 'vertical',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <button
                   type="submit"
                   style={{
                     padding: '1.2rem',
-                    background: '#c1a96c',
-                    color: '#000',
+                    background: '#1E90FF',
+                    color: '#fff',
                     border: 'none',
                     borderRadius: '8px',
                     fontSize: '1.1rem',
@@ -543,6 +550,7 @@ function Contact() {
           </div>
         </div>
       </div>
+
     </div>
   )
 }

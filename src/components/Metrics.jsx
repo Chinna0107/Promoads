@@ -21,11 +21,11 @@ function Metrics() {
 
   return (
     <div style={{ padding: '4rem 2rem', maxWidth: '1400px', margin: '0 auto', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000' }}>
-      <section style={{ marginBottom: '4rem', background: '#1a1a1a', padding: '4rem 3rem', borderRadius: '16px', width: '100%' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
-          <div style={{ order: 1 }}>
-            <h1 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: '#FFD700' }}>Skyvertising Metrics</h1>
-            <h2 style={{ fontSize: '1.5rem', color: '#FFF', marginBottom: '1rem' }}>Visibility &amp; Physical Impressions</h2>
+      <section style={{ marginBottom: '4rem', background: '#1a1a1a', padding: '4rem 3rem', borderRadius: '16px', width: '100%' }} className="metrics-section">
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }} className="metrics-grid">
+          <div style={{ order: 1 }} className="metrics-controls">
+            <h1>Skyvertising Metrics</h1>
+            <h2>Visibility &amp; Physical Impressions</h2>
             <p style={{ color: '#CCC', marginBottom: '2rem', lineHeight: '1.6' }}>
               Estimate how altitude, canvas size and city density translate into real, physical impressions on the ground.
             </p>
@@ -34,9 +34,9 @@ function Metrics() {
               Canvas: {screens} screens × {screenSize} sq ft each = {totalCanvas.toLocaleString()} sq ft ({totalCanvasM2} m²).
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }} className="metrics-inputs">
               <div>
-                <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem', color: '#FFF' }}>Flight height (ft)</label>
+                <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem', color: '#1E90FF' }}>Flight height (ft)</label>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <input 
                     type="range" 
@@ -47,12 +47,12 @@ function Metrics() {
                     onChange={(e) => setFlightHeight(Number(e.target.value))}
                     style={{ flex: 1, height: '6px', borderRadius: '3px', background: '#333', outline: 'none' }}
                   />
-                  <span style={{ minWidth: '80px', fontWeight: 600, color: '#FFD700' }}>{flightHeight} ft</span>
+                  <span style={{ minWidth: '80px', fontWeight: 600, color: '#FF0000' }}>{flightHeight} ft</span>
                 </div>
               </div>
 
               <div>
-                <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem', color: '#FFF' }}># Screens</label>
+                <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem', color: '#1E90FF' }}># Screens</label>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <input 
                     type="range" 
@@ -63,12 +63,12 @@ function Metrics() {
                     onChange={(e) => setScreens(Number(e.target.value))}
                     style={{ flex: 1, height: '6px', borderRadius: '3px', background: '#333', outline: 'none' }}
                   />
-                  <span style={{ minWidth: '80px', fontWeight: 600, color: '#FFD700' }}>{screens}</span>
+                  <span style={{ minWidth: '80px', fontWeight: 600, color: '#FF0000' }}>{screens}</span>
                 </div>
               </div>
 
               <div>
-                <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem', color: '#FFF' }}>Per-screen size (sq ft)</label>
+                <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem', color: '#1E90FF' }}>Per-screen size (sq ft)</label>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <input 
                     type="range" 
@@ -79,12 +79,12 @@ function Metrics() {
                     onChange={(e) => setScreenSize(Number(e.target.value))}
                     style={{ flex: 1, height: '6px', borderRadius: '3px', background: '#333', outline: 'none' }}
                   />
-                  <span style={{ minWidth: '80px', fontWeight: 600, color: '#FFD700' }}>{screenSize}</span>
+                  <span style={{ minWidth: '80px', fontWeight: 600, color: '#FF0000' }}>{screenSize}</span>
                 </div>
               </div>
 
               <div>
-                <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem', color: '#FFF' }}>City density (people/km²)</label>
+                <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem', color: '#1E90FF' }}>City density (people/km²)</label>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <input 
                     type="range" 
@@ -95,7 +95,7 @@ function Metrics() {
                     onChange={(e) => setCityDensity(Number(e.target.value))}
                     style={{ flex: 1, height: '6px', borderRadius: '3px', background: '#333', outline: 'none' }}
                   />
-                  <span style={{ minWidth: '80px', fontWeight: 600, color: '#FFD700' }}>{cityDensity.toLocaleString()}</span>
+                  <span style={{ minWidth: '80px', fontWeight: 600, color: '#FF0000' }}>{cityDensity.toLocaleString()}</span>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ function Metrics() {
             </p>
           </div>
 
-          <div style={{ order: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ order: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }} className="metrics-table">
             <table style={{ width: '100%', borderCollapse: 'collapse', boxShadow: '0 4px 12px rgba(255, 215, 0, 0.2)', borderRadius: '12px', overflow: 'hidden' }}>
               <thead>
                 <tr>
@@ -127,6 +127,20 @@ function Metrics() {
           </div>
         </div>
       </section>
+      
+      <style>{`
+        @media (max-width: 768px) {
+          .metrics-section { padding: 2rem 1.5rem !important; }
+          .metrics-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+          .metrics-controls { order: 1 !important; }
+          .metrics-table { order: 2 !important; }
+          .metrics-inputs { grid-template-columns: 1fr !important; }
+          h1 { font-size: 2rem !important; }
+          h2 { font-size: 1.3rem !important; }
+          table { font-size: 0.9rem !important; }
+          th, td { padding: 0.75rem !important; }
+        }
+      `}</style>
     </div>
   )
 }

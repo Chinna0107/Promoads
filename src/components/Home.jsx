@@ -132,58 +132,60 @@ function Home() {
         </div>
       </div>
 
-      <div style={{ background: '#000', padding: '5rem 2rem' }}>
+      <div style={{ background: 'linear-gradient(135deg, #000 0%, #1a1a1a 100%)', padding: '5rem 2rem' }}>
         <h2 style={{
           textAlign: 'center',
-          fontSize: '2.5rem',
+          fontSize: '3rem',
           marginBottom: '4rem',
-          color: '#c1a96c'
-        }}>Our Products</h2>
+          fontWeight: 700
+        }}>
+          <span style={{ color: '#1E90FF' }}>Our </span>
+          <span style={{ color: '#FF0000' }}>Products</span>
+        </h2>
         
         {products.map((product, index) => (
           <div 
             key={index} 
             onMouseEnter={() => setHoveredProduct(index)}
             onMouseLeave={() => setHoveredProduct(null)}
+            className="product-card"
             style={{
-            maxWidth: '1200px',
+            maxWidth: '600px',
             margin: '0 auto 4rem',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '3rem',
-            flexDirection: index % 2 === 0 ? 'row' : 'row-reverse',
             background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
-            padding: '2rem',
             borderRadius: '15px',
-            boxShadow: hoveredProduct === index ? '0 8px 40px rgba(193,169,108,0.6), 0 0 0 2px #c1a96c' : '0 8px 30px rgba(0,0,0,0.5)',
+            boxShadow: hoveredProduct === index ? '0 12px 50px rgba(30, 144, 255, 0.4), 0 0 0 2px #1E90FF' : '0 8px 30px rgba(30, 144, 255, 0.2)',
             transition: 'all 0.4s ease',
-            transform: hoveredProduct === index ? 'translateY(-10px)' : 'translateY(0)'
+            transform: hoveredProduct === index ? 'translateY(-10px) scale(1.02)' : 'translateY(0)',
+            border: '1px solid rgba(30, 144, 255, 0.2)',
+            overflow: 'hidden'
           }}>
-            <div style={{ flex: 1, overflow: 'hidden', borderRadius: '10px' }}>
+            <div style={{ overflow: 'hidden', height: '400px' }}>
               <img 
                 src={product.image} 
                 alt={product.title}
                 style={{
                   width: '100%',
-                  height: '400px',
+                  height: '100%',
                   objectFit: 'cover',
-                  borderRadius: '10px',
-                  boxShadow: '0 4px 12px rgba(193,169,108,0.3)',
                   transition: 'transform 0.4s ease',
                   transform: hoveredProduct === index ? 'scale(1.05)' : 'scale(1)'
                 }}
               />
             </div>
-            <div style={{ flex: 1 }}>
+            <div style={{ padding: '2rem' }}>
               <h3 style={{
-                fontSize: '2rem',
+                fontSize: '2.2rem',
                 marginBottom: '1rem',
-                color: '#c1a96c'
-              }}>{product.title}</h3>
+                fontWeight: 700
+              }}>
+                <span style={{ color: '#1E90FF' }}>{product.title.split(' ')[0]} </span>
+                <span style={{ color: '#FF0000' }}>{product.title.split(' ').slice(1).join(' ')}</span>
+              </h3>
               <p style={{
                 fontSize: '1.1rem',
                 lineHeight: '1.8',
-                color: '#fff'
+                color: '#e0e0e0'
               }}>{product.description}</p>
             </div>
           </div>
@@ -196,9 +198,9 @@ function Home() {
             onMouseEnter={() => setHoveredCard('quote')}
             onMouseLeave={() => setHoveredCard(null)}
             style={{
-            background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
+            background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%)',
             borderRadius: '20px',
-            boxShadow: hoveredCard === 'quote' ? '0 20px 70px rgba(193,169,108,0.5), 0 0 0 2px #c1a96c' : '0 20px 60px rgba(193,169,108,0.3)',
+            boxShadow: hoveredCard === 'quote' ? '0 20px 70px rgba(193,169,108,0.5), 0 0 0 2px #1E90FF' : '0 20px 60px rgba(193,169,108,0.3)',
             overflow: 'hidden',
             display: 'flex',
             transition: 'all 0.4s ease',
@@ -206,20 +208,20 @@ function Home() {
           }}>
             <div style={{
               flex: 1,
-              background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
+              background: 'linear-gradient(135deg, #f0f8ff 0%, #1E90FF 100%)',
               padding: '3rem',
               color: 'white',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              borderRight: '2px solid #c1a96c'
+              borderRight: '2px solid #1E90FF'
             }}>
               <div style={{
                 fontSize: '3rem',
                 marginBottom: '1.5rem'
               }}>💡</div>
-              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#c1a96c' }}>Get a Quote</h2>
-              <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: '1.8', color: '#fff' }}>
+              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#1E90FF' }}>Get a Quote</h2>
+              <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: '1.8', color: '#000' }}>
                 Bring your vision to life with aerial LED advertising. From events to campaigns, we create moments that dominate the sky.
               </p>
               <div style={{ marginBottom: '2rem' }}>
@@ -230,7 +232,7 @@ function Home() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -250,7 +252,7 @@ function Home() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -269,7 +271,7 @@ function Home() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -288,18 +290,18 @@ function Home() {
                 padding: '1.5rem',
                 borderRadius: '10px',
                 marginTop: '2rem',
-                border: '1px solid #c1a96c'
+                border: '1px solid #1E90FF'
               }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#c1a96c' }}>Have Questions?</h3>
-                <p style={{ color: '#fff' }}>We're here to help you create unforgettable moments</p>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#1E90FF' }}>Have Questions?</h3>
+                <p style={{ color: '#000' }}>We're here to help you create unforgettable moments</p>
               </div>
             </div>
             
-            <div style={{ flex: 1, padding: '3rem', background: '#2d2d2d' }}>
+            <div style={{ flex: 1, padding: '3rem', background: '#e6f2ff' }}>
               <h3 style={{
                 fontSize: '1.8rem',
                 marginBottom: '1.5rem',
-                color: '#c1a96c',
+                color: '#1E90FF',
                 fontWeight: 600
               }}>Request Your Quote</h3>
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
@@ -317,10 +319,10 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -337,10 +339,10 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -358,10 +360,10 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -378,10 +380,10 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -398,10 +400,10 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <textarea
@@ -420,17 +422,17 @@ function Home() {
                     resize: 'vertical',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <button
                   type="submit"
                   style={{
                     padding: '1.2rem',
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     color: '#000',
                     border: 'none',
                     borderRadius: '8px',
@@ -463,9 +465,9 @@ function Home() {
             onMouseEnter={() => setHoveredCard('franchise')}
             onMouseLeave={() => setHoveredCard(null)}
             style={{
-            background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
+            background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%)',
             borderRadius: '20px',
-            boxShadow: hoveredCard === 'franchise' ? '0 20px 70px rgba(193,169,108,0.5), 0 0 0 2px #c1a96c' : '0 20px 60px rgba(193,169,108,0.3)',
+            boxShadow: hoveredCard === 'franchise' ? '0 20px 70px rgba(193,169,108,0.5), 0 0 0 2px #1E90FF' : '0 20px 60px rgba(193,169,108,0.3)',
             overflow: 'hidden',
             display: 'flex',
             transition: 'all 0.4s ease',
@@ -473,20 +475,20 @@ function Home() {
           }}>
             <div style={{
               flex: 1,
-              background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
+              background: 'linear-gradient(135deg, #f0f8ff 0%, #1E90FF 100%)',
               padding: '3rem',
               color: 'white',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              borderRight: '2px solid #c1a96c'
+              borderRight: '2px solid #1E90FF'
             }}>
               <div style={{
                 fontSize: '3rem',
                 marginBottom: '1.5rem'
               }}>🤝</div>
-              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#c1a96c' }}>Franchise Enquiry</h2>
-              <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: '1.8', color: '#fff' }}>
+              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#1E90FF' }}>Franchise Enquiry</h2>
+              <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: '1.8', color: '#000' }}>
                 Partner with us to bring aerial LED advertising to your city. We provide the technology, training, and support — you grow the business locally.
               </p>
               <div style={{ marginBottom: '2rem' }}>
@@ -497,7 +499,7 @@ function Home() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -517,7 +519,7 @@ function Home() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -536,7 +538,7 @@ function Home() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -555,18 +557,18 @@ function Home() {
                 padding: '1.5rem',
                 borderRadius: '10px',
                 marginTop: '2rem',
-                border: '1px solid #c1a96c'
+                border: '1px solid #1E90FF'
               }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#c1a96c' }}>Become a Franchise Partner</h3>
-                <p style={{ color: '#fff' }}>Join our growing network of successful partners</p>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#1E90FF' }}>Become a Franchise Partner</h3>
+                <p style={{ color: '#000' }}>Join our growing network of successful partners</p>
               </div>
             </div>
             
-            <div style={{ flex: 1, padding: '3rem', background: '#2d2d2d' }}>
+            <div style={{ flex: 1, padding: '3rem', background: '#e6f2ff' }}>
               <h3 style={{
                 fontSize: '1.8rem',
                 marginBottom: '1.5rem',
-                color: '#c1a96c',
+                color: '#1E90FF',
                 fontWeight: 600
               }}>Partner With Us</h3>
               <form onSubmit={handleFranchiseSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
@@ -584,10 +586,10 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -604,10 +606,10 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -625,10 +627,10 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <input
@@ -645,10 +647,10 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <textarea
@@ -667,17 +669,17 @@ function Home() {
                     resize: 'vertical',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#1a1a1a',
-                    color: '#fff'
+                    background: '#f0f8ff',
+                    color: '#000'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#c1a96c'}
+                  onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
                 <button
                   type="submit"
                   style={{
                     padding: '1.2rem',
-                    background: '#c1a96c',
+                    background: '#1E90FF',
                     color: '#000',
                     border: 'none',
                     borderRadius: '8px',
@@ -731,6 +733,22 @@ function Home() {
       >
         📱
       </a>
+      
+      <style>{`
+        @media (max-width: 768px) {
+          div[style*="display: flex"] > div[style*="borderRight"] {
+            border-right: none !important;
+            border-bottom: 2px solid #1E90FF !important;
+          }
+          div[style*="display: flex"][style*="overflow: hidden"] {
+            flex-direction: column !important;
+          }
+          div[style*="flexDirection: index"][style*="row"],
+          div[style*="flexDirection: index"][style*="row-reverse"] {
+            flex-direction: column !important;
+          }
+        }
+      `}</style>
     </div>
   )
 }
