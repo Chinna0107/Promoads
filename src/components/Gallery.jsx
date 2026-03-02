@@ -12,7 +12,7 @@ function Gallery() {
   ]
 
   return (
-    <div style={{ background: '#808080', minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem' }}>
+    <div style={{ background: '#FF8C0A', minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem' }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
         <h1 style={{ 
           fontSize: '3.5rem', 

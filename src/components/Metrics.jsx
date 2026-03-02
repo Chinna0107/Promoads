@@ -20,7 +20,7 @@ function Metrics() {
   const practicalRadius = (flightHeight / 60).toFixed(1)
 
   return (
-    <div style={{ padding: '4rem 2rem', maxWidth: '1400px', margin: '0 auto', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#808080' }}>
+    <div style={{ padding: '4rem 2rem', maxWidth: '1400px', margin: '0 auto', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#FF8C0A' }}>
       <section style={{ marginBottom: '4rem', background: '#2a2a2a', padding: '4rem 3rem', borderRadius: '16px', width: '100%' }} className="metrics-section">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }} className="metrics-grid">
           <div style={{ order: 1 }} className="metrics-controls">

@@ -111,7 +111,7 @@ function Home() {
             marginBottom: '1rem',
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
           }}>
-            CRAFTING MOMENTS WITH PIXELS
+            At Promo Ads, we redefine how brands capture attention.
           </h1>
           <p style={{
             fontSize: '1.5rem',
@@ -119,7 +119,7 @@ function Home() {
             textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
             marginBottom: '1rem'
           }}>
-            Traditional media stops at ground level, we take it to the skyline.
+            In a world crowded with traditional advertising, we take your message above the noise — literally.
           </p>
           <p style={{
             fontSize: '1.2rem',
@@ -127,12 +127,12 @@ function Home() {
             textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
             opacity: 0.95
           }}>
-            Next-generation aerial advertising and brand activation company redefining how businesses capture attention.
+            Through cutting-edge aerial LED technology, we transform the night sky into a powerful branding platform. From real estate launches and large-scale events to political campaigns and corporate activations, we create unforgettable visual experiences that demand attention and drive impact.
           </p>
         </div>
       </div>
 
-      <div style={{ background: '#808080', padding: '5rem 2rem' }}>
+      <div style={{ background: '#FF8C0A', padding: '5rem 2rem' }}>
         <h2 style={{
           textAlign: 'center',
           fontSize: '3rem',
@@ -140,59 +140,104 @@ function Home() {
           fontWeight: 700
         }}>
           <span style={{ color: '#1E90FF' }}>Our </span>
-          <span style={{ color: '#FF0000' }}>Products</span>
+          <span style={{ color: '#FF0000' }}>Services</span>
         </h2>
         
-        {products.map((product, index) => (
-          <div 
-            key={index} 
-            onMouseEnter={() => setHoveredProduct(index)}
-            onMouseLeave={() => setHoveredProduct(null)}
-            className="product-card"
-            style={{
-            maxWidth: '600px',
-            margin: '0 auto 4rem',
-            background: 'linear-gradient(135deg, #808080 0%, #909090 100%)',
-            borderRadius: '15px',
-            boxShadow: hoveredProduct === index ? '0 12px 50px rgba(30, 144, 255, 0.4), 0 0 0 2px #1E90FF' : '0 8px 30px rgba(30, 144, 255, 0.2)',
-            transition: 'all 0.4s ease',
-            transform: hoveredProduct === index ? 'translateY(-10px) scale(1.02)' : 'translateY(0)',
-            border: '1px solid rgba(30, 144, 255, 0.2)',
-            overflow: 'hidden'
-          }}>
-            <div style={{ overflow: 'hidden', height: '400px' }}>
-              <img 
-                src={product.image} 
-                alt={product.title}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '2rem',
+          maxWidth: '1400px',
+          margin: '0 auto'
+        }}>
+          {[
+            { title: 'Weddings', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop' },
+            { title: 'Political Events', image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&h=600&fit=crop' },
+            { title: 'Corporate Events', image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop' },
+            { title: 'Launches', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop' },
+            { title: 'Surprises', image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&h=600&fit=crop' },
+            { title: 'Birthdays', image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop' },
+            { title: 'Personal Events', image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop' },
+            { title: 'Any Kind of Event', image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop' }
+          ].map((service, index) => (
+            <div
+              key={index}
+              style={{
+                position: 'relative',
+                borderRadius: '15px',
+                overflow: 'hidden',
+                height: '350px',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 8px 30px rgba(30, 144, 255, 0.2)',
+                border: '2px solid transparent'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-10px)'
+                e.currentTarget.style.boxShadow = '0 12px 50px rgba(30, 144, 255, 0.4)'
+                e.currentTarget.style.border = '2px solid #1E90FF'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 8px 30px rgba(30, 144, 255, 0.2)'
+                e.currentTarget.style.border = '2px solid transparent'
+              }}
+            >
+              <img
+                src={service.image}
+                alt={service.title}
                 style={{
                   width: '100%',
                   height: '100%',
-                  objectFit: 'cover',
-                  transition: 'transform 0.4s ease',
-                  transform: hoveredProduct === index ? 'scale(1.05)' : 'scale(1)'
+                  objectFit: 'cover'
                 }}
               />
-            </div>
-            <div style={{ padding: '2rem' }}>
-              <h3 style={{
-                fontSize: '2.2rem',
-                marginBottom: '1rem',
-                fontWeight: 700
+              <div style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)',
+                padding: '2rem 1.5rem',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '1rem'
               }}>
-                <span style={{ color: '#1E90FF' }}>{product.title.split(' ')[0]} </span>
-                <span style={{ color: '#FF0000' }}>{product.title.split(' ').slice(1).join(' ')}</span>
-              </h3>
-              <p style={{
-                fontSize: '1.1rem',
-                lineHeight: '1.8',
-                color: '#e0e0e0'
-              }}>{product.description}</p>
+                <h3 style={{
+                  fontSize: '1.8rem',
+                  fontWeight: 700,
+                  color: '#fff',
+                  textAlign: 'center'
+                }}>{service.title}</h3>
+                <button
+                  onClick={() => {
+                    window.location.href = `/contact?service=${encodeURIComponent(service.title)}`
+                  }}
+                  style={{
+                    padding: '0.8rem 2rem',
+                    background: 'linear-gradient(135deg, #1E90FF, #FF0000)',
+                    color: '#fff',
+                    border: 'none',
+                    borderRadius: '8px',
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    transition: 'transform 0.3s',
+                    boxShadow: '0 4px 15px rgba(30, 144, 255, 0.4)'
+                  }}
+                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
+                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                >
+                  Get Your Quotation
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      <div style={{ background: '#808080', padding: '6rem 2rem' }}>
+      <div style={{ background: '#FF8C0A', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div 
             onMouseEnter={() => setHoveredCard('quote')}
@@ -393,6 +438,7 @@ function Home() {
                   value={formData.eventType}
                   onChange={handleChange}
                   required
+                  list="eventTypes"
                   style={{
                     padding: '1rem',
                     borderRadius: '8px',
@@ -406,6 +452,16 @@ function Home() {
                   onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
+                <datalist id="eventTypes">
+                  <option value="Weddings" />
+                  <option value="Political Events" />
+                  <option value="Corporate Events" />
+                  <option value="Launches" />
+                  <option value="Surprises" />
+                  <option value="Birthdays" />
+                  <option value="Personal Events" />
+                  <option value="Any Kind of Event" />
+                </datalist>
                 <textarea
                   name="requirement"
                   placeholder="Tell us more about your requirement *"
@@ -459,7 +515,7 @@ function Home() {
         </div>
       </div>
 
-      <div style={{ background: '#808080', padding: '6rem 2rem' }}>
+      <div style={{ background: '#FF8C0A', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div 
             onMouseEnter={() => setHoveredCard('franchise')}

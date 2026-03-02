@@ -7,7 +7,7 @@ function Footer() {
     <footer style={{ width: '100vw', margin: 0, padding: 0, boxSizing: 'border-box', position: 'relative', left: '50%', right: '50%', marginLeft: '-50vw', marginRight: '-50vw' }}>
       
       {/* Section 1: Company Info & Inquiries */}
-      <div style={{ backgroundColor: '#2a2a2a', padding: '4rem 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
+      <div style={{ backgroundColor: '#FF8C0A', padding: '4rem 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
         <div style={{ flex: '1 1 400px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
             <img src={logo} alt="PromoADS Logo" style={{ height: '50px', width: 'auto', borderRadius: '8px' }} />
@@ -22,7 +22,7 @@ function Footer() {
       </div>
 
       {/* Section 2: Location, Get In Touch, Explore, Connect */}
-      <div style={{ backgroundColor: '#252525', padding: '4rem 5%', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem' }}>
+      <div style={{ backgroundColor: '#FF8C0A', padding: '4rem 5%', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem' }}>
         
         {/* Location */}
         <div>
@@ -37,7 +37,7 @@ function Footer() {
         {/* Get In Touch */}
         <div>
           <h3 style={{ color: '#1E90FF', marginBottom: '1.2rem', fontSize: '1.2rem', fontWeight: '700', letterSpacing: '1px' }}>Get In Touch</h3>
-          <a href="tel:+919177067341" style={{ color: '#FFF', textDecoration: 'none', fontSize: '1rem', transition: 'all 0.3s', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }} onMouseOver={(e) => { e.currentTarget.style.color = '#1E90FF'; }} onMouseOut={(e) => { e.currentTarget.style.color = '#FFF'; }}><FaPhone /> +91 9177067341</a>
+          <a href="tel:+919652945626" style={{ color: '#FFF', textDecoration: 'none', fontSize: '1rem', transition: 'all 0.3s', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }} onMouseOver={(e) => { e.currentTarget.style.color = '#1E90FF'; }} onMouseOut={(e) => { e.currentTarget.style.color = '#FFF'; }}><FaPhone /> +91 9652945626</a>
           <a href="mailto:info@promoads.com" style={{ color: '#FFF', textDecoration: 'none', fontSize: '0.9rem', transition: 'all 0.3s', display: 'flex', alignItems: 'center', gap: '0.5rem' }} onMouseOver={(e) => { e.currentTarget.style.color = '#1E90FF'; }} onMouseOut={(e) => { e.currentTarget.style.color = '#FFF'; }}><FaEnvelope /> info@promoads.com</a>
         </div>
 
@@ -46,8 +46,7 @@ function Footer() {
           <h3 style={{ color: '#1E90FF', marginBottom: '1.2rem', fontSize: '1.2rem', fontWeight: '700', letterSpacing: '1px' }}>Explore</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ color: '#FFF', textDecoration: 'none', fontSize: '0.95rem', transition: 'all 0.3s', position: 'relative', display: 'inline-block', width: 'fit-content' }} onMouseOver={(e) => { e.target.style.color = '#1E90FF'; e.target.style.textDecoration = 'underline'; e.target.style.textUnderlineOffset = '4px'; }} onMouseOut={(e) => { e.target.style.color = '#FFF'; e.target.style.textDecoration = 'none'; }}>Home</Link>
-            <Link to="/products" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ color: '#FFF', textDecoration: 'none', fontSize: '0.95rem', transition: 'all 0.3s', position: 'relative', display: 'inline-block', width: 'fit-content' }} onMouseOver={(e) => { e.target.style.color = '#1E90FF'; e.target.style.textDecoration = 'underline'; e.target.style.textUnderlineOffset = '4px'; }} onMouseOut={(e) => { e.target.style.color = '#FFF'; e.target.style.textDecoration = 'none'; }}>Sky Advertising</Link>
-            <Link to="/products" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ color: '#FFF', textDecoration: 'none', fontSize: '0.95rem', transition: 'all 0.3s', position: 'relative', display: 'inline-block', width: 'fit-content' }} onMouseOver={(e) => { e.target.style.color = '#1E90FF'; e.target.style.textDecoration = 'underline'; e.target.style.textUnderlineOffset = '4px'; }} onMouseOut={(e) => { e.target.style.color = '#FFF'; e.target.style.textDecoration = 'none'; }}>Promotions</Link>
+            <Link to="/products" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ color: '#FFF', textDecoration: 'none', fontSize: '0.95rem', transition: 'all 0.3s', position: 'relative', display: 'inline-block', width: 'fit-content' }} onMouseOver={(e) => { e.target.style.color = '#1E90FF'; e.target.style.textDecoration = 'underline'; e.target.style.textUnderlineOffset = '4px'; }} onMouseOut={(e) => { e.target.style.color = '#FFF'; e.target.style.textDecoration = 'none'; }}>Our Services</Link>
             <Link to="/gallery" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ color: '#FFF', textDecoration: 'none', fontSize: '0.95rem', transition: 'all 0.3s', position: 'relative', display: 'inline-block', width: 'fit-content' }} onMouseOver={(e) => { e.target.style.color = '#1E90FF'; e.target.style.textDecoration = 'underline'; e.target.style.textUnderlineOffset = '4px'; }} onMouseOut={(e) => { e.target.style.color = '#FFF'; e.target.style.textDecoration = 'none'; }}>Gallery</Link>
             <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ color: '#FFF', textDecoration: 'none', fontSize: '0.95rem', transition: 'all 0.3s', position: 'relative', display: 'inline-block', width: 'fit-content' }} onMouseOver={(e) => { e.target.style.color = '#1E90FF'; e.target.style.textDecoration = 'underline'; e.target.style.textUnderlineOffset = '4px'; }} onMouseOut={(e) => { e.target.style.color = '#FFF'; e.target.style.textDecoration = 'none'; }}>Contact</Link>
           </div>
@@ -66,7 +65,7 @@ function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div style={{ backgroundColor: '#2a2a2a', padding: '2rem 5%', textAlign: 'center', borderTop: '1px solid #333' }}>
+      <div style={{ backgroundColor: '#FF8C0A', padding: '2rem 5%', textAlign: 'center', borderTop: '1px solid #333' }}>
         <p style={{ color: '#FFF', fontSize: '0.9rem', letterSpacing: '0.5px', margin: 0 }}>© {new Date().getFullYear()} PromoADS. All rights reserved.</p>
       </div>
     </footer>

@@ -16,11 +16,11 @@ function Franchise() {
   const handleFranchiseSubmit = (e) => {
     e.preventDefault()
     const message = `*Franchise Enquiry*%0A%0AFull Name: ${franchiseData.fullName}%0AEmail: ${franchiseData.email}%0APhone: ${franchiseData.phone}%0ACity: ${franchiseData.city}%0AAbout: ${franchiseData.about}`
-    window.open(`https://wa.me/919177067341?text=${message}`, '_blank')
+    window.open(`https://wa.me/919652945626?text=${message}`, '_blank')
   }
 
   return (
-    <div style={{ background: '#808080', minHeight: '100vh', paddingTop: '80px' }}>
+    <div style={{ background: '#FF8C0A', minHeight: '100vh', paddingTop: '80px' }}>
       <style>{`
         @media (max-width: 768px) {
           .franchise-card { flex-direction: column !important; }
@@ -28,7 +28,7 @@ function Franchise() {
         }
       `}</style>
 
-      <div style={{ background: '#808080', padding: '6rem 2rem' }}>
+      <div style={{ background: '#FF8C0A', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div className="franchise-card" style={{
             background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',

@@ -1,14 +1,25 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 function Contact() {
+  const location = useLocation()
+  const searchParams = new URLSearchParams(location.search)
+  const serviceParam = searchParams.get('service') || ''
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     city: '',
-    eventType: '',
+    eventType: serviceParam,
     requirement: ''
   })
+
+  useEffect(() => {
+    if (serviceParam) {
+      setFormData(prev => ({ ...prev, eventType: serviceParam }))
+    }
+  }, [serviceParam])
 
   const [franchiseData, setFranchiseData] = useState({
     fullName: '',
@@ -21,7 +32,7 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const message = `*Quote Request*%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0ACity: ${formData.city}%0AEvent Type: ${formData.eventType}%0ARequirement: ${formData.requirement}`
-    window.open(`https://wa.me/919177067341?text=${message}`, '_blank')
+    window.open(`https://wa.me/919652945626?text=${message}`, '_blank')
   }
 
   const handleChange = (e) => {
@@ -35,11 +46,11 @@ function Contact() {
   const handleFranchiseSubmit = (e) => {
     e.preventDefault()
     const message = `*Franchise Enquiry*%0A%0AFull Name: ${franchiseData.fullName}%0AEmail: ${franchiseData.email}%0APhone: ${franchiseData.phone}%0ACity: ${franchiseData.city}%0AAbout: ${franchiseData.about}`
-    window.open(`https://wa.me/919177067341?text=${message}`, '_blank')
+    window.open(`https://wa.me/919652945626?text=${message}`, '_blank')
   }
 
   return (
-    <div style={{ background: '#808080', minHeight: '100vh', paddingTop: '80px' }}>
+    <div style={{ background: '#FF8C0A', minHeight: '100vh', paddingTop: '80px' }}>
       <style>{`
         @media (max-width: 768px) {
           .contact-card { flex-direction: column !important; }
@@ -47,7 +58,7 @@ function Contact() {
         }
       `}</style>
 
-      <div style={{ background: '#808080', padding: '6rem 2rem' }}>
+      <div style={{ background: '#FF8C0A', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div className="contact-card" style={{
             background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%)',
@@ -243,6 +254,7 @@ function Contact() {
                   value={formData.eventType}
                   onChange={handleChange}
                   required
+                  list="eventTypes"
                   style={{
                     padding: '1rem',
                     borderRadius: '8px',
@@ -256,6 +268,16 @@ function Contact() {
                   onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
                 />
+                <datalist id="eventTypes">
+                  <option value="Weddings" />
+                  <option value="Political Events" />
+                  <option value="Corporate Events" />
+                  <option value="Launches" />
+                  <option value="Surprises" />
+                  <option value="Birthdays" />
+                  <option value="Personal Events" />
+                  <option value="Any Kind of Event" />
+                </datalist>
                 <textarea
                   name="requirement"
                   placeholder="Tell us more about your requirement *"
@@ -309,7 +331,7 @@ function Contact() {
         </div>
       </div>
 
-      <div style={{ background: '#808080', padding: '6rem 2rem' }}>
+      <div style={{ background: '#FF8C0A', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div className="contact-card" style={{
             background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%)',
