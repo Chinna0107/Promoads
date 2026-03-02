@@ -11,7 +11,7 @@ function Header() {
       top: 0,
       left: 0,
       right: 0,
-      background: 'rgba(0, 0, 0, 0.8)',
+      background: 'rgba(255, 255, 255, 0.95)',
       backdropFilter: 'blur(10px)',
       padding: '0.8rem 0',
       zIndex: 1000,
@@ -56,7 +56,7 @@ function Header() {
             display: 'none',
             background: 'transparent',
             border: 'none',
-            color: 'white',
+            color: '#000',
             fontSize: '1.5rem',
             cursor: 'pointer',
             padding: '0.5rem'
@@ -72,7 +72,7 @@ function Header() {
           alignItems: 'center'
         }} className="desktop-nav">
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
-            color: 'white',
+            color: '#000',
             textDecoration: 'none',
             fontWeight: 500,
             transition: 'all 0.3s ease',
@@ -83,59 +83,59 @@ function Header() {
             e.target.style.transform = 'translateY(-2px)'
           }}
           onMouseLeave={(e) => {
-            e.target.style.color = 'white'
+            e.target.style.color = '#000'
             e.target.style.transform = 'translateY(0)'
           }}
           ><b>Home</b></Link>
           
           <Link to="/products" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
-            color: 'white',
+            color: '#000',
             textDecoration: 'none',
             fontWeight: 500,
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => e.target.style.color = '#1E90FF'}
-          onMouseLeave={(e) => e.target.style.color = 'white'}
+          onMouseLeave={(e) => e.target.style.color = '#000'}
           ><b>Our Services</b></Link>
           
           <Link to="/metrics" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
-            color: 'white',
+            color: '#000',
             textDecoration: 'none',
             fontWeight: 500,
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => e.target.style.color = '#1E90FF'}
-          onMouseLeave={(e) => e.target.style.color = 'white'}
+          onMouseLeave={(e) => e.target.style.color = '#000'}
           ><b>Metrics</b></Link>
           
           <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
-            color: 'white',
+            color: '#000',
             textDecoration: 'none',
             fontWeight: 500,
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => e.target.style.color = '#1E90FF'}
-          onMouseLeave={(e) => e.target.style.color = 'white'}
+          onMouseLeave={(e) => e.target.style.color = '#000'}
           ><b>Contact Us</b></Link>
           
           <Link to="/franchise" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
-            color: 'white',
+            color: '#000',
             textDecoration: 'none',
             fontWeight: 500,
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => e.target.style.color = '#1E90FF'}
-          onMouseLeave={(e) => e.target.style.color = 'white'}
+          onMouseLeave={(e) => e.target.style.color = '#000'}
           ><b>For Franchise</b></Link>
           
           <Link to="/gallery" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
-            color: 'white',
+            color: '#000',
             textDecoration: 'none',
             fontWeight: 500,
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => e.target.style.color = '#1E90FF'}
-          onMouseLeave={(e) => e.target.style.color = 'white'}
+          onMouseLeave={(e) => e.target.style.color = '#000'}
           ><b>Gallery</b></Link>
         </nav>
 
@@ -171,12 +171,12 @@ function Header() {
                 border: '1px solid rgba(30, 144, 255, 0.3)'
               }}
             >
-              <Link to="/" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: 'white', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = 'white'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>Home</b></Link>
-              <Link to="/products" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: 'white', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = 'white'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>Our Services</b></Link>
-              <Link to="/metrics" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: 'white', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = 'white'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>Metrics</b></Link>
-              <Link to="/contact" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: 'white', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = 'white'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>Contact Us</b></Link>
-              <Link to="/franchise" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: 'white', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = 'white'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>For Franchise</b></Link>
-              <Link to="/gallery" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: 'white', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = 'white'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>Gallery</b></Link>
+              <Link to="/" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: '#000', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = '#000'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>Home</b></Link>
+              <Link to="/products" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: '#000', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = '#000'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>Our Services</b></Link>
+              <Link to="/metrics" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: '#000', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = '#000'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>Metrics</b></Link>
+              <Link to="/contact" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: '#000', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = '#000'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>Contact Us</b></Link>
+              <Link to="/franchise" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: '#000', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = '#000'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>For Franchise</b></Link>
+              <Link to="/gallery" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }} style={{ color: '#000', textDecoration: 'none', padding: '0.8rem 1.5rem', fontWeight: 700, fontSize: '1.2rem', transition: 'all 0.3s', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.05)' }} onMouseEnter={(e) => { e.target.style.color = '#1E90FF'; e.target.style.background = 'rgba(30, 144, 255, 0.2)'; e.target.style.transform = 'translateX(5px)'; }} onMouseLeave={(e) => { e.target.style.color = '#000'; e.target.style.background = 'rgba(255, 255, 255, 0.05)'; e.target.style.transform = 'translateX(0)'; }}><b>Gallery</b></Link>
             </nav>
           </>
         )}

@@ -119,7 +119,7 @@ function Home() {
             textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
             marginBottom: '1rem'
           }}>
-            In a world crowded with traditional advertising, we take your message above the noise — literally.
+            {/* In a world crowded with traditional advertising, we take your message above the noise — literally. */}
           </p>
           <p style={{
             fontSize: '1.2rem',
@@ -127,7 +127,7 @@ function Home() {
             textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
             opacity: 0.95
           }}>
-            Through cutting-edge aerial LED technology, we transform the night sky into a powerful branding platform. From real estate launches and large-scale events to political campaigns and corporate activations, we create unforgettable visual experiences that demand attention and drive impact.
+            {/* Through cutting-edge aerial LED technology, we transform the night sky into a powerful branding platform. From real estate launches and large-scale events to political campaigns and corporate activations, we create unforgettable visual experiences that demand attention and drive impact. */}
           </p>
         </div>
       </div>
