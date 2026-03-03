@@ -21,14 +21,14 @@ function Products() {
           gap: '2rem'
         }}>
           {[
-            { title: 'Weddings', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop' },
-            { title: 'Political Events', image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&h=600&fit=crop' },
-            { title: 'Corporate Events', image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop' },
-            { title: 'Launches', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop' },
-            { title: 'Surprises', image: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&h=600&fit=crop' },
-            { title: 'Birthdays', image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop' },
-            { title: 'Personal Events', image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop' },
-            { title: 'Any Kind of Event', image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop' }
+{ title: 'Weddings', image: 'https://res.cloudinary.com/dgyykbmt6/image/upload/v1772515317/pm1_fd9py4.jpg' },
+            { title: 'Political Events', image: 'https://res.cloudinary.com/dgyykbmt6/image/upload/v1772515323/pm2_vbmn4j.jpg' },
+            { title: 'Corporate Events', image: 'https://res.cloudinary.com/dgyykbmt6/image/upload/v1772515329/pm3_qgv8wm.jpg' },
+            { title: 'Launches', image: 'https://res.cloudinary.com/dgyykbmt6/image/upload/v1772515336/pm4_k7ij03.jpg' },
+            { title: 'Surprises', image: 'https://res.cloudinary.com/dgyykbmt6/image/upload/v1772515344/pm5_l9zthm.jpg' },
+            { title: 'Birthdays', image: 'https://res.cloudinary.com/dgyykbmt6/image/upload/v1772515351/pm6_p1rgwv.jpg' },
+            { title: 'Personal Events', image: 'https://res.cloudinary.com/dgyykbmt6/image/upload/v1772515359/pm7_un0pjc.jpg' },
+            { title: 'Any Kind of Event', image: 'https://res.cloudinary.com/dgyykbmt6/image/upload/v1772515365/pm8_etb0es.jpg' }
           ].map((service, index) => (
             <div
               key={index}
