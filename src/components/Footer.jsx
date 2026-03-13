@@ -16,7 +16,7 @@ function Footer() {
         </div>
         
         <div style={{ textAlign: 'right', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '1.5rem' }}>
-          <p style={{ color: '#1E90FF', fontSize: '1.0rem', fontWeight: '800', margin: 0, letterSpacing: '2px', textTransform: 'uppercase' }}>Inquiries</p>
+          <p style={{ color: '#1E90FF', fontSize: '1.0rem', fontWeight: '800', margin: 0, letterSpacing: '2px', textTransform: 'uppercase' }}>Enquiries</p>
           <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem', textDecoration: 'none', color: '#fff', fontSize: '0.9rem', fontWeight: '800', backgroundColor: '#667eea', padding: '1rem 2.5rem', borderRadius: '50px', transition: 'all 0.4s ease', boxShadow: '0 8px 25px rgba(102, 126, 234, 0.5)', textTransform: 'uppercase', letterSpacing: '2px', border: '2px solid transparent' }} onMouseOver={(e) => { e.currentTarget.style.color = '#667eea'; e.currentTarget.style.borderColor = '#667eea'; e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.transform = 'translateY(-8px) scale(1.05)'; e.currentTarget.style.boxShadow = '0 12px 35px rgba(102, 126, 234, 0.7)'; }} onMouseOut={(e) => { e.currentTarget.style.backgroundColor = '#667eea'; e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0) scale(1)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(102, 126, 234, 0.5)'; }}>Let's Talk Now <FaArrowUp style={{ transform: 'rotate(45deg)' }} /></Link>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import videoFile from '../assets/video.mp4'
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -54,23 +55,22 @@ function Home() {
   return (
     <div>
       <div style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
-        {images.map((img, index) => (
-          <div
-            key={index}
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundImage: `url(${img})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              opacity: currentSlide === index ? 1 : 0,
-              transition: 'opacity 1s ease-in-out'
-            }}
-          />
-        ))}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        >
+          <source src={videoFile} type="video/mp4" />
+        </video>
         
         <div style={{
           position: 'absolute',
@@ -122,7 +122,7 @@ function Home() {
           fontWeight: 700
         }}>
           <span style={{ color: '#1E90FF' }}>Our </span>
-          <span style={{ color: '#FF0000' }}>Services</span>
+          <span style={{ color: '#1E90FF' }}>Services</span>
         </h2>
         
         <div style={{
