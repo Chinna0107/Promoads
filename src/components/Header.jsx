@@ -1,9 +1,25 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import logo from '../assets/logo.jpeg'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const menuRef = useRef(null)
+  const menuButtonRef = useRef(null)
+
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const handleClickOutside = (event) => {
+      const target = event.target
+      if (menuRef.current?.contains(target)) return
+      if (menuButtonRef.current?.contains(target)) return
+      setMenuOpen(false)
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [menuOpen])
 
   return (
     <header style={{
@@ -66,6 +82,7 @@ function Header() {
         <button 
           className={`mobile-menu-btn ${menuOpen ? 'active' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
+          ref={menuButtonRef}
           style={{
             display: 'none',
             background: 'transparent',
@@ -197,6 +214,7 @@ function Header() {
               }}
             />
             <nav 
+              ref={menuRef}
               style={{
                 position: 'fixed',
                 top: '80px',
