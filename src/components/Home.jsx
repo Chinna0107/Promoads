@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import videoFile from '../assets/video.mp4'
+import videoFile from '../assets/audio.mp4'
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -45,7 +45,7 @@ function Home() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const message = `*Quote Request*%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0ACity: ${formData.city}%0AEvent Type: ${formData.eventType}%0ARequirement: ${formData.requirement}`
-    window.open(`https://wa.me/919177067341?text=${message}`, '_blank')
+    window.open(`https://wa.me/917842971358?text=${message}`, '_blank')
   }
 
   const handleChange = (e) => {
@@ -88,13 +88,29 @@ function Home() {
           padding: '2rem'
         }}>
           <h1 style={{
-            fontSize: '3.5rem',
-            fontWeight: 700,
+            fontSize: '4.5rem',
+            fontWeight: 1000,
             marginBottom: '1rem',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+            textShadow: '0 8px 32px rgba(30, 144, 255, 0.8)',
+            fontFamily: "'Bitcount Prop Double', 'Courier New', monospace",
+            letterSpacing: '3px',
+            background: 'linear-gradient(135deg, #fff 0%, #1E90FF 50%, #FF8C0A 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
           }}>
-            <b>Promo ads<br></br> better dreams deserves better promos.</b>
+            Promo Ads
           </h1>
+          <p style={{
+            fontSize: '1.8rem',
+            maxWidth: '900px',
+            textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
+            marginBottom: '1rem',
+            fontFamily: "'Inter', sans-serif",
+            fontWeight: 500,
+          }}>
+            Better Dreams Deserve Better Promos
+          </p>
           <p style={{
             fontSize: '1.5rem',
             maxWidth: '800px',
@@ -114,7 +130,7 @@ function Home() {
         </div>
       </div>
 
-      <div style={{ background: '#FF8C0A', padding: '5rem 2rem' }}>
+      <div style={{ background: '#0a0a0a', padding: '5rem 2rem' }}>
         <h2 style={{
           textAlign: 'center',
           fontSize: '3rem',
@@ -122,7 +138,7 @@ function Home() {
           fontWeight: 700
         }}>
           <span style={{ color: '#1E90FF' }}>Our </span>
-          <span style={{ color: '#1E90FF' }}>Services</span>
+          <span style={{ color: '#FF8C0A' }}>Services</span>
         </h2>
         
         <div style={{
@@ -197,21 +213,31 @@ function Home() {
                     window.location.href = `/contact?service=${encodeURIComponent(service.title)}`
                   }}
                   style={{
-                    padding: '0.8rem 2rem',
-                    background: 'linear-gradient(135deg, #1E90FF, #FF0000)',
+                    padding: '1rem 2.5rem',
+                    background: 'linear-gradient(135deg, #1E90FF, #FF8C0A)',
                     color: '#fff',
                     border: 'none',
-                    borderRadius: '8px',
-                    fontSize: '1rem',
-                    fontWeight: 600,
+                    borderRadius: '50px',
+                    fontSize: '1.1rem',
+                    fontWeight: 800,
                     cursor: 'pointer',
-                    transition: 'transform 0.3s',
-                    boxShadow: '0 4px 15px rgba(30, 144, 255, 0.4)'
+                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                    boxShadow: '0 8px 24px rgba(30, 144, 255, 0.5)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px',
+                    position: 'relative',
+                    overflow: 'hidden',
                   }}
-                  onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'translateY(-4px) scale(1.05)'
+                    e.target.style.boxShadow = '0 12px 40px rgba(30, 144, 255, 0.7)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'translateY(0) scale(1)'
+                    e.target.style.boxShadow = '0 8px 24px rgba(30, 144, 255, 0.5)'
+                  }}
                 >
-                  Get Your Quotation
+                  Get Quotation →
                 </button>
               </div>
             </div>
@@ -219,13 +245,13 @@ function Home() {
         </div>
       </div>
 
-      <div style={{ background: '#FF8C0A', padding: '6rem 2rem' }}>
+      <div style={{ background: '#0a0a0a', padding: '6rem 2rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div 
             onMouseEnter={() => setHoveredCard('quote')}
             onMouseLeave={() => setHoveredCard(null)}
             style={{
-            background: 'linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%)',
+            background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
             borderRadius: '20px',
             boxShadow: hoveredCard === 'quote' ? '0 20px 70px rgba(193,169,108,0.5), 0 0 0 2px #1E90FF' : '0 20px 60px rgba(193,169,108,0.3)',
             overflow: 'hidden',
@@ -235,7 +261,7 @@ function Home() {
           }}>
             <div style={{
               flex: 1,
-              background: 'linear-gradient(135deg, #f0f8ff 0%, #1E90FF 100%)',
+              background: 'linear-gradient(135deg, rgba(30,144,255,0.2) 0%, rgba(255,140,10,0.1) 100%)',
               padding: '3rem',
               color: 'white',
               display: 'flex',
@@ -247,8 +273,8 @@ function Home() {
                 fontSize: '3rem',
                 marginBottom: '1.5rem'
               }}>💡</div>
-              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#1E90FF' }}>Get a Quote</h2>
-              <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: '1.8', color: '#000' }}>
+              <h2 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', fontWeight: 700, color: '#FF8C0A' }}>Get a Quote</h2>
+              <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: '1.8', color: '#fff' }}>
                 Bring your vision to life with aerial LED advertising. From events to campaigns, we create moments that dominate the sky.
               </p>
               <div style={{ marginBottom: '2rem' }}>
@@ -259,7 +285,7 @@ function Home() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#1E90FF',
+                    background: 'linear-gradient(135deg, #1E90FF, #FF8C0A)',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -267,7 +293,7 @@ function Home() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   Fast Response
@@ -279,7 +305,7 @@ function Home() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#1E90FF',
+                    background: 'linear-gradient(135deg, #1E90FF, #FF8C0A)',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -287,7 +313,7 @@ function Home() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   Custom Show Planning
@@ -298,7 +324,7 @@ function Home() {
                   fontSize: '1.1rem'
                 }}>
                   <span style={{
-                    background: '#1E90FF',
+                    background: 'linear-gradient(135deg, #1E90FF, #FF8C0A)',
                     borderRadius: '50%',
                     width: '30px',
                     height: '30px',
@@ -306,7 +332,7 @@ function Home() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginRight: '1rem',
-                    color: '#000',
+                    color: '#fff',
                     fontWeight: 'bold'
                   }}>✓</span>
                   Pan-India Operations
@@ -319,16 +345,16 @@ function Home() {
                 marginTop: '2rem',
                 border: '1px solid #1E90FF'
               }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#1E90FF' }}>Have Questions?</h3>
-                <p style={{ color: '#000' }}>We're here to help you create unforgettable moments</p>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: '#FF8C0A' }}>Have Questions?</h3>
+                <p style={{ color: '#fff' }}>We're here to help you create unforgettable moments</p>
               </div>
             </div>
             
-            <div style={{ flex: 1, padding: '3rem', background: '#e6f2ff' }}>
+            <div style={{ flex: 1, padding: '3rem', background: '#1a1a1a' }}>
               <h3 style={{
                 fontSize: '1.8rem',
                 marginBottom: '1.5rem',
-                color: '#1E90FF',
+                color: '#FF8C0A',
                 fontWeight: 600
               }}>Request Your Quote</h3>
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
@@ -346,8 +372,8 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#f0f8ff',
-                    color: '#000'
+                    background: '#0a0a0a',
+                    color: '#fff'
                   }}
                   onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
@@ -366,8 +392,8 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#f0f8ff',
-                    color: '#000'
+                    background: '#0a0a0a',
+                    color: '#fff'
                   }}
                   onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
@@ -387,8 +413,8 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#f0f8ff',
-                    color: '#000'
+                    background: '#0a0a0a',
+                    color: '#fff'
                   }}
                   onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
@@ -407,8 +433,8 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#f0f8ff',
-                    color: '#000'
+                    background: '#0a0a0a',
+                    color: '#fff'
                   }}
                   onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
@@ -428,8 +454,8 @@ function Home() {
                     fontSize: '1rem',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#f0f8ff',
-                    color: '#000'
+                    background: '#0a0a0a',
+                    color: '#fff'
                   }}
                   onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
@@ -460,8 +486,8 @@ function Home() {
                     resize: 'vertical',
                     transition: 'border 0.3s',
                     outline: 'none',
-                    background: '#f0f8ff',
-                    color: '#000'
+                    background: '#0a0a0a',
+                    color: '#fff'
                   }}
                   onFocus={(e) => e.target.style.borderColor = '#1E90FF'}
                   onBlur={(e) => e.target.style.borderColor = '#3d3d3d'}
@@ -470,8 +496,8 @@ function Home() {
                   type="submit"
                   style={{
                     padding: '1.2rem',
-                    background: '#1E90FF',
-                    color: '#000',
+                    background: 'linear-gradient(135deg, #1E90FF, #FF8C0A)',
+                    color: '#fff',
                     border: 'none',
                     borderRadius: '8px',
                     fontSize: '1.1rem',
@@ -498,7 +524,7 @@ function Home() {
       </div>
 
       <a
-        href="https://wa.me/919177067341"
+        href="https://wa.me/917842971358"
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -537,6 +563,55 @@ function Home() {
           div[style*="flexDirection: index"][style*="row"],
           div[style*="flexDirection: index"][style*="row-reverse"] {
             flex-direction: column !important;
+          }
+          h1 {
+            font-size: 2.5rem !important;
+          }
+          p[style*="fontSize: '1.8rem'"] {
+            font-size: 1.2rem !important;
+          }
+          h2[style*="fontSize: '3rem'"] {
+            font-size: 2rem !important;
+          }
+          h3[style*="fontSize: '1.8rem'"] {
+            font-size: 1.3rem !important;
+          }
+          button[style*="fontSize: '1.1rem'"] {
+            font-size: 0.9rem !important;
+            padding: 0.8rem 1.5rem !important;
+          }
+          div[style*="fontSize: '2.8rem'"] {
+            font-size: 1.8rem !important;
+          }
+          div[style*="fontSize: '1.5rem'"] {
+            font-size: 1.1rem !important;
+          }
+          h2[style*="fontSize: '2.8rem'"] {
+            font-size: 1.8rem !important;
+          }
+          h3[style*="fontSize: '1.8rem'"] {
+            font-size: 1.3rem !important;
+          }
+          p[style*="fontSize: '1.2rem'"] {
+            font-size: 1rem !important;
+          }
+          input, textarea {
+            font-size: 0.9rem !important;
+          }
+        }
+        @media (max-width: 480px) {
+          h1 {
+            font-size: 2rem !important;
+          }
+          p[style*="fontSize: '1.8rem'"] {
+            font-size: 1rem !important;
+          }
+          h2[style*="fontSize: '3rem'"] {
+            font-size: 1.6rem !important;
+          }
+          button[style*="fontSize: '1.1rem'"] {
+            font-size: 0.85rem !important;
+            padding: 0.7rem 1.2rem !important;
           }
         }
       `}</style>

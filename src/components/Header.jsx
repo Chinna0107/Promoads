@@ -11,19 +11,29 @@ function Header() {
       top: 0,
       left: 0,
       right: 0,
-      background: 'rgba(255, 255, 255, 0.95)',
-      backdropFilter: 'blur(10px)',
-      padding: '0.8rem 0',
+      background: 'linear-gradient(135deg, rgba(8, 12, 20, 0.55) 0%, rgba(30, 144, 255, 0.18) 100%)',
+      backdropFilter: 'blur(18px) saturate(140%)',
+      WebkitBackdropFilter: 'blur(18px) saturate(140%)',
+      padding: '0.9rem 0',
       zIndex: 1000,
-      boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
+      boxShadow: '0 12px 32px rgba(0,0,0,0.35)',
+      borderBottom: '1px solid rgba(255, 255, 255, 0.18)'
     }}>
+      <div style={{
+        position: 'absolute',
+        inset: '0 0 auto 0',
+        height: '2px',
+        background: 'linear-gradient(90deg, #1E90FF, #FF8C0A, #1E90FF)',
+        opacity: 0.9
+      }} />
       <div style={{
         maxWidth: '1400px',
         margin: '0 auto',
         padding: '0 2rem',
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        position: 'relative'
       }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none' }}>
           <img 
@@ -35,7 +45,8 @@ function Header() {
               cursor: 'pointer',
               transition: 'transform 0.3s ease',
               borderRadius: '10px',
-              boxShadow: '0 4px 15px rgba(30, 144, 255, 0.3)'
+              boxShadow: '0 10px 25px rgba(30, 144, 255, 0.45)',
+              border: '1px solid rgba(255, 255, 255, 0.35)'
             }}
             onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
             onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
@@ -43,9 +54,11 @@ function Header() {
           <div style={{
             fontSize: '1.2rem',
             fontWeight: 700,
-            letterSpacing: '0.5px'
+            letterSpacing: '0.5px',
+            color: '#fff',
+            textShadow: '0 2px 10px rgba(0,0,0,0.45)'
           }}>
-            <span style={{ color: '#1E90FF' }}>Promo</span>
+            <span style={{ color: '#1E90FF' }}>Promo </span>
             <span style={{ color: '#df6a11' }}>ads</span>
           </div>
         </Link>
@@ -75,50 +88,96 @@ function Header() {
           alignItems: 'center'
         }} className="desktop-nav">
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
-            color: '#000',
+            color: '#fff',
             textDecoration: 'none',
             fontWeight: 500,
             transition: 'all 0.3s ease',
-            position: 'relative'
+            position: 'relative',
+            padding: '0.4rem 0.6rem',
+            borderRadius: '10px',
+            textShadow: '0 2px 10px rgba(0,0,0,0.45)'
           }}
           onMouseEnter={(e) => {
             e.target.style.color = '#1E90FF'
             e.target.style.transform = 'translateY(-2px)'
+            e.target.style.background = 'rgba(255, 255, 255, 0.12)'
+            e.target.style.boxShadow = '0 8px 20px rgba(30, 144, 255, 0.35)'
           }}
           onMouseLeave={(e) => {
-            e.target.style.color = '#000'
+            e.target.style.color = '#fff'
             e.target.style.transform = 'translateY(0)'
+            e.target.style.background = 'transparent'
+            e.target.style.boxShadow = 'none'
           }}
           ><b>Home</b></Link>
           
           <Link to="/products" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
-            color: '#000',
+            color: '#fff',
             textDecoration: 'none',
             fontWeight: 500,
-            transition: 'all 0.3s ease'
+            transition: 'all 0.3s ease',
+            padding: '0.4rem 0.6rem',
+            borderRadius: '10px',
+            textShadow: '0 2px 10px rgba(0,0,0,0.45)'
           }}
-          onMouseEnter={(e) => e.target.style.color = '#1E90FF'}
-          onMouseLeave={(e) => e.target.style.color = '#000'}
+          onMouseEnter={(e) => {
+            e.target.style.color = '#1E90FF'
+            e.target.style.transform = 'translateY(-2px)'
+            e.target.style.background = 'rgba(255, 255, 255, 0.12)'
+            e.target.style.boxShadow = '0 8px 20px rgba(30, 144, 255, 0.35)'
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.color = '#fff'
+            e.target.style.transform = 'translateY(0)'
+            e.target.style.background = 'transparent'
+            e.target.style.boxShadow = 'none'
+          }}
           ><b>Our Services</b></Link>
           
           <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
-            color: '#000',
+            color: '#fff',
             textDecoration: 'none',
             fontWeight: 500,
-            transition: 'all 0.3s ease'
+            transition: 'all 0.3s ease',
+            padding: '0.4rem 0.6rem',
+            borderRadius: '10px',
+            textShadow: '0 2px 10px rgba(0,0,0,0.45)'
           }}
-          onMouseEnter={(e) => e.target.style.color = '#1E90FF'}
-          onMouseLeave={(e) => e.target.style.color = '#000'}
+          onMouseEnter={(e) => {
+            e.target.style.color = '#1E90FF'
+            e.target.style.transform = 'translateY(-2px)'
+            e.target.style.background = 'rgba(255, 255, 255, 0.12)'
+            e.target.style.boxShadow = '0 8px 20px rgba(30, 144, 255, 0.35)'
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.color = '#fff'
+            e.target.style.transform = 'translateY(0)'
+            e.target.style.background = 'transparent'
+            e.target.style.boxShadow = 'none'
+          }}
           ><b>Contact Us</b></Link>
           
           <Link to="/gallery" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
-            color: '#000',
+            color: '#fff',
             textDecoration: 'none',
             fontWeight: 500,
-            transition: 'all 0.3s ease'
+            transition: 'all 0.3s ease',
+            padding: '0.4rem 0.6rem',
+            borderRadius: '10px',
+            textShadow: '0 2px 10px rgba(0,0,0,0.45)'
           }}
-          onMouseEnter={(e) => e.target.style.color = '#1E90FF'}
-          onMouseLeave={(e) => e.target.style.color = '#000'}
+          onMouseEnter={(e) => {
+            e.target.style.color = '#1E90FF'
+            e.target.style.transform = 'translateY(-2px)'
+            e.target.style.background = 'rgba(255, 255, 255, 0.12)'
+            e.target.style.boxShadow = '0 8px 20px rgba(30, 144, 255, 0.35)'
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.color = '#fff'
+            e.target.style.transform = 'translateY(0)'
+            e.target.style.background = 'transparent'
+            e.target.style.boxShadow = 'none'
+          }}
           ><b>Gallery</b></Link>
         </nav>
 
@@ -183,7 +242,7 @@ function Header() {
             display: block;
             width: 25px;
             height: 2px;
-            background: #000;
+            background: #fff;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
