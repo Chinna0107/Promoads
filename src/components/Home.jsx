@@ -512,7 +512,7 @@ function Home() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          fontSize: '2rem',
+          fontSize: '2.5rem',
           color: 'white',
           textDecoration: 'none',
           boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
@@ -522,7 +522,7 @@ function Home() {
         onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
       >
-        📱
+        💬
       </a>
       
       <style>{`
